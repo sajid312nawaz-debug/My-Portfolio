@@ -1,0 +1,144 @@
+.about-section {
+  background-color: var(--bg-secondary);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-text .lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1rem;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 0.875rem !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Tech Sphere Visualization */
+.about-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+}
+
+.tech-sphere-placeholder {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px dashed var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+}
+
+.circle-core {
+  width: 120px;
+  height: 120px;
+  background-color: var(--bg-primary);
+  color: var(--accent-color);
+  z-index: 10;
+  font-size: 1.25rem;
+  border: 2px solid var(--accent-color);
+}
+
+.circle-1 {
+  width: 80px;
+  height: 80px;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  top: -20px;
+  right: 20px;
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+.circle-2 {
+  width: 70px;
+  height: 70px;
+  background: var(--accent-color);
+  color: white;
+  bottom: 0;
+  left: -10px;
+  animation: float 5s ease-in-out infinite alternate-reverse;
+}
+
+.circle-3 {
+  width: 60px;
+  height: 60px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  bottom: 20px;
+  right: -20px;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
