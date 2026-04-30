@@ -7,8 +7,8 @@ import './Contact.css';
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     message: ''
   });
   const [status, setStatus] = useState({
@@ -24,32 +24,20 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setStatus({ submitting: true, success: false, error: null });
 
-    // IMPORTANT: Replace these with your actual EmailJS credentials in the .env file
-    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    const isPlaceholder = (id) => !id || id.includes("placeholder") || id.includes("your_");
-
-    if (isPlaceholder(SERVICE_ID) || isPlaceholder(TEMPLATE_ID) || isPlaceholder(PUBLIC_KEY)) {
-      console.error("EmailJS credentials are missing or still set to placeholders in .env");
-      setStatus({ 
-        submitting: false, 
-        success: false, 
-        error: "Email system is not configured yet. Please set up your EmailJS credentials in the .env file." 
-      });
-      return;
-    }
-
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+    emailjs.sendForm(
+      'service_frtadkr',      // Step 2 se copy karo
+      'template_8yfs5sy',     // Step 3 se copy karo
+      form.current,
+      'Zb8TQ80oxEtVL25I3'     // Step 4 se copy karo
+    )
       .then((result) => {
           console.log("Email sent successfully:", result.text);
           setStatus({ submitting: false, success: true, error: null });
-          setFormData({ name: '', email: '', message: '' });
+          setFormData({ from_name: '', from_email: '', message: '' });
           setTimeout(() => setStatus(prev => ({ ...prev, success: false })), 5000);
       }, (error) => {
           console.error("Email sending failed:", error);
@@ -128,53 +116,77 @@ const Contact = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <form ref={form} className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
+            <form ref={form} className="contact-form" onSubmit={sendEmail}>
+              <motion.div 
+                className="form-group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
                 <input 
                   type="text" 
-                  id="name" 
-                  name="name" 
-                  value={formData.name}
+                  id="from_name" 
+                  name="from_name" 
+                  value={formData.from_name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder=" "
                   required 
                 />
-              </div>
+                <label htmlFor="from_name">Name</label>
+              </motion.div>
               
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
+              <motion.div 
+                className="form-group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
                 <input 
                   type="email" 
-                  id="email" 
-                  name="email" 
-                  value={formData.email}
+                  id="from_email" 
+                  name="from_email" 
+                  value={formData.from_email}
                   onChange={handleChange}
-                  placeholder="john@example.com"
+                  placeholder=" "
                   required 
                 />
-              </div>
+                <label htmlFor="from_email">Email</label>
+              </motion.div>
               
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
+              <motion.div 
+                className="form-group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
                 <textarea 
                   id="message" 
                   name="message" 
                   rows="5" 
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Write your message here..."
+                  placeholder=" "
                   required 
                 ></textarea>
-              </div>
+                <label htmlFor="message">Message</label>
+              </motion.div>
               
-              <button 
+              <motion.button 
                 type="submit" 
                 className={`btn btn-primary submit-btn ${status.submitting ? 'loading' : ''}`}
                 disabled={status.submitting}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                whileHover={{ scale: 1.02, boxShadow: "0 10px 20px rgba(59, 130, 246, 0.3)" }}
+                whileTap={{ scale: 0.98 }}
               >
-                {status.submitting ? 'Sending...' : <><FiSend /> Send Message</>}
-              </button>
+                {status.submitting ? 'Sending...' : <><FiSend className="send-icon" /> Send Message</>}
+              </motion.button>
 
               {status.success && (
                 <motion.div 

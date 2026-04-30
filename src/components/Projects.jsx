@@ -10,7 +10,7 @@ const projectsList = [
     technologies: ["React.js", "Vite", "Framer Motion", "Vanilla CSS"],
     githubLink: "https://github.com/",
     liveLink: "https://example.com",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     title: "Task Management App",
@@ -18,7 +18,7 @@ const projectsList = [
     technologies: ["MERN Stack", "React", "Node.js", "MongoDB", "Express"],
     githubLink: "https://github.com/",
     liveLink: "https://example.com",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     title: "E-commerce Website",
@@ -26,7 +26,7 @@ const projectsList = [
     technologies: ["React", "Redux", "Stripe API", "Node.js", "MongoDB"],
     githubLink: "https://github.com/",
     liveLink: "https://example.com",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     title: "College Management System",
@@ -35,6 +35,14 @@ const projectsList = [
     githubLink: "https://github.com/",
     liveLink: "https://example.com",
     image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    title: "TO-Do App",
+    description: "A clean and interactive to-do list application for daily task management. Features smooth animations, task filtering, and local storage support.",
+    technologies: ["React.js", "Tailwind CSS", "Framer Motion"],
+    githubLink: "https://github.com/ShafaqatIqbal77",
+    liveLink: "#",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
 
