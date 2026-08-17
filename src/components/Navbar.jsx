@@ -27,7 +27,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href="#home" className="logo">
-          <span className="logo-accent">Shafaqat</span> Iqbal
+          <span className="logo-accent">Muhammad</span> Sajjid
         </a>
 
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>

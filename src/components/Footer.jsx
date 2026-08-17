@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <p>
-            &copy; {new Date().getFullYear()} Shafaqat Iqbal. All rights reserved.
+            &copy; {new Date().getFullYear()} Muhammad Sajjid. All rights reserved.
           </p>
           <div className="footer-links">
             <a href="#home">Home</a>

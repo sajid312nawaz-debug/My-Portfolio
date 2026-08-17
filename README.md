@@ -1,4 +1,4 @@
-# 👨‍💻 Shafaqat Iqbal - Personal Portfolio
+# 👨‍💻 Muhammad Sajjid - Personal Portfolio
 
 A modern, highly responsive, and interactive personal portfolio website built to showcase my skills, projects, and professional experience.
 
@@ -55,6 +55,6 @@ To make the contact form functional:
 
 ## 📫 Contact
 
-Shafaqat Iqbal - shafaqatiqbaaal@gmail.com
+Muhammad Sajjid - shafaqatiqbaaal@gmail.com
 
 Project Link: [https://github.com/ShafaqatIqbal77/Portfolio](https://github.com/ShafaqatIqbal77/Portfolio)

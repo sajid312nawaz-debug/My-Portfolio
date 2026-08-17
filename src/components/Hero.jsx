@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
 import './Hero.css';
-import profilePic from '../assets/profile-pic.png';
+import profilePic from '../assets/new-profile-pic.jpeg';
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <span className="hero-greeting">Hello, I'm</span>
-          <h1 className="hero-title">Shafaqat Iqbal</h1>
+          <h1 className="hero-title">Muhammad Sajjid</h1>
           <h2 className="hero-subtitle">Frontend Developer</h2>
           
           <p className="hero-description">
@@ -48,7 +48,7 @@ const Hero = () => {
         >
           <div className="hero-image-wrapper">
             <div className="hero-blob"></div>
-            <img src={profilePic} alt="Shafaqat Iqbal" className="hero-profile-image" />
+            <img src={profilePic} alt="Muhammad Sajjid" className="hero-profile-image" />
           </div>
         </motion.div>
       </div>
